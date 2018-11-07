@@ -3,6 +3,10 @@
 
 import sys
 
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
 if sys.version_info[0] == 3:
     #from .extractor import Extractor, VideoExtractor
     #from .util import log
